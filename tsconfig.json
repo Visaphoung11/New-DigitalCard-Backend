@@ -1,7 +1,8 @@
+
 {
   "compilerOptions": {
     "typeRoots": ["./src/types", "./node_modules/@types"],
-    "target": "ES6",
+    "target": "ES2020", // Upgrade target to modern Node support
     "module": "CommonJS",
     "rootDir": "./src",
     "baseUrl": "./",
@@ -17,9 +18,9 @@
     "allowSyntheticDefaultImports": true,
 
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"] // Keep alias mapping
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"] // Exclude dist to avoid duplicate compilation
 }
